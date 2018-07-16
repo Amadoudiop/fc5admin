@@ -1,0 +1,2 @@
+DELETE FROM player
+LIMIT 5000

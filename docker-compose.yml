@@ -1,0 +1,34 @@
+version: '2'
+services:
+  data:
+    image: creemson/data
+#    restart: always
+    volumes:
+      - ./Docker/Data/datadir:/var/lib/mysql
+  mariadb:
+    image: mariadb:latest
+#    restart: always
+    ports:
+      - 3307:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: database
+      MYSQL_USER: user
+      MYSQL_PASSWORD: pass
+    volumes_from:
+        - data
+  adminer:
+    image: adminer:latest
+    restart: always
+    ports:
+      - 8084:8080
+  web:
+    image: creemson/apache_php
+    ports:
+      - 60001:80
+    environment:
+      XDEBUG_CONFIG: remote_host=172.22.0.1
+      volumes_from: application
+      links: mariadb
+    volumes:
+      - ./application:/var/www/html

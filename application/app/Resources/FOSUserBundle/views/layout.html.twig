@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <title>{% block title %}login | Administration{% endblock %}</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700" rel="stylesheet">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="{{ asset('css/login-page.css') }}">
+
+
+		{% block stylesheets %}{% endblock %}
+	</head>
+	<body>
+		<div class="app-container app-login">
+			{% block content %}
+			    {% block fos_user_content %}{% endblock %}
+			{% endblock %}
+			{% block javascripts %}{% endblock %}
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+			<script type="text/javascript" src="{{ asset('js/login-page.js') }}"></script>
+		</div>
+	</body>
+</html>

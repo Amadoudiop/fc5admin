@@ -1,0 +1,2 @@
+DELETE FROM player WHERE id = 3456
+LIMIT 1
