@@ -1,1 +1,0 @@
-SELECT COUNT(id) AS NumberOfPlayers FROM player

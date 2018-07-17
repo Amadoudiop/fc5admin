@@ -1,3 +1,0 @@
-SELECT *
-FROM `player`
-LIMIT 10000

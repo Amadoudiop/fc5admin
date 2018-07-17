@@ -1,1 +1,0 @@
-SELECT * FROM `player` LIMIT 1

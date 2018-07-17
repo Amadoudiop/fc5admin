@@ -11,17 +11,12 @@ services:
     ports:
       - 3307:3306
     environment:
-      MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: database
-      MYSQL_USER: user
-      MYSQL_PASSWORD: pass
+      MYSQL_ROOT_PASSWORD: 99zkAjKJdCtLwLRH
+      MYSQL_DATABASE: fc5api
+      MYSQL_USER: mysqlcreemson
+      MYSQL_PASSWORD: PF7j3vZUpqdjarkM
     volumes_from:
         - data
-  adminer:
-    image: adminer:latest
-    restart: always
-    ports:
-      - 8084:8080
   web:
     image: creemson/apache_php
     ports:

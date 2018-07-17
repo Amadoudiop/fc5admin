@@ -15,3 +15,4 @@
 /application/var/SymfonyRequirements.php
 /application/vendor/
 /application/web/bundles/
+/Docker/

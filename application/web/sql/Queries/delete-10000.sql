@@ -1,2 +1,0 @@
-DELETE FROM player
-LIMIT 10000
